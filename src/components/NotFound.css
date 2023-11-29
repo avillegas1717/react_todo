@@ -1,0 +1,28 @@
+.notFound {
+    text-align: center;
+    position: relative;
+    max-height: 85vh;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.notFound img {
+    width: 100%;
+    position: relative;
+    top: -2em;
+}
+
+.notFound h1 {
+    position: absolute;
+    top: 5vh;
+    color: white;
+    width: 85%;
+    margin-left: 7.5%;
+    font-variant: small-caps;
+}
+
+@media only screen and (max-width: 1801px) {
+    .notFound img {
+        top: unset;
+    }
+}
