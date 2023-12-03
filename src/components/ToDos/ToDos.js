@@ -13,7 +13,7 @@ export default function Todos() {
   const [showCreate, setShowCreate] = useState(false);
 
   const getTodos = () => {
-    axios.get(`https://todoapi.aliciavillegas.net/api/ToDos`).then(response => {
+    axios.get(`http://todoapi.aliciavillegas.net/api/ToDos`).then(response => {
       setToDos(response.data)
     })
   }

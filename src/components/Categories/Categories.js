@@ -1,42 +1,25 @@
-//useState imported for storing categories from the API, useEffect to automate the API call
 import React, { useState, useEffect } from 'react'
 import Container from 'react-bootstrap/Container'
-//imported axios after running "npm install axios"
 import axios from 'axios'
 import SingleCategory from './SingleCategory'
 
-//Below imports are for create functionality:
+
 import { useAuth } from '../../contexts/AuthContext'
 import CatCreate from './CatCreate'
 
-//Steps to Read functionality
-//1. add useState and useEffect to the react import
-//2. install and import axios
-//3. create the hook to store the data
-//4. create the function that uses axios to get the categories
-//5. create useEffect to automate retrieval of data in this component
-//----- You should now have your data stored, and now on to the UI
-//6. use .map to render each category to the screen (also add any supplemental UI (table and thead)...combo of Categories and SingleCategory)
-
-//Steps to Create functionality
-//1. Create validationSchema and form specific to Categories
-//2. import currentUser from the context
-//3. Create a react hook to show/hide the form
-//4. Create and render CatCreate in the conditonal rendering, based on whether the user is an admin or not
-//5. Update the create functionality in CatForm.js
 
 export default function Categories() {
-  //the hook below will store the Categories data returned by the API
+
   const [categories, setCategories] = useState([])
 
-  //The two hooks below are for create functionality
+ 
   const { currentUser } = useAuth()
-  //This React hook below will track the state of whether the Create form is showing/hidden
+
   const [showCreate, setShowCreate] = useState(false)
 
-  //below we write the hook to get our categories from the API using axios
+ 
   const getCategories = () => {
-    axios.get(`https://todoapi.aliciavillegas.net/api/ToDos`).then(response => {
+    axios.get(`http://todo.aliciavillegas.net/api/Categories`).then(response => {
       console.log(response)
       setCategories(response.data)
     })

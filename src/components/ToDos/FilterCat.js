@@ -7,7 +7,7 @@ export default function FilterCat(props) {
   const [categories, setCategories] = useState([])
 
   useEffect(() => {
-    axios.get(`https://todoapi.aliciavillegas.net/api/ToDos`).then(response => {
+    axios.get(`https://todo.aliciavillegas.net/api/ToDos`).then(response => {
       console.log(response)
       setCategories(response.data)
     })

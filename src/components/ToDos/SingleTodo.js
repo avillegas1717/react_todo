@@ -15,7 +15,7 @@ export default function SingleTodo(props) {
     // Below is our custom delete function
     const deleteToDo = (id)=> {
       if(window.confirm(`Are you sure you want to delete${name}?`)){
-        axios.delete(`https://todoapi.aliciavillegas.net/api/ToDos/${id}`).then(() => {
+        axios.delete(`http://todoapi.aliciavillegas.net/api/ToDos/${id}`).then(() => {
           props.getToDos()
         })
       }

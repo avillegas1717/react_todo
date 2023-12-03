@@ -6,7 +6,7 @@ export default function Profile() {
   const { currentUser } = useAuth()
   return (
     <span className="profile p-2">
-      Hello {!currentUser.displayName ? currentUser.email : currentUser.displayName}!
+      Good Day {!currentUser.displayName ? currentUser.email : currentUser.displayName}!
       <img src={currentUser.photoURL} alt={currentUser.email} />
     </span>
   )

@@ -1,8 +1,7 @@
 import React from 'react'
 import { Container, Card } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-//useAuth below gives us access to currentUser, login, or logout.
-//We must destructure these values from useAuth in a hook inside the component (see below)
+
 import { useAuth } from '../../contexts/AuthContext'
 
 export default function Login() {
@@ -12,7 +11,7 @@ export default function Login() {
   async function handleAuth() {
     await login()
 
-    //return the user to a specific location using useNavigate hook from react-router-dom
+   
     return navigate('/')
   }
 
