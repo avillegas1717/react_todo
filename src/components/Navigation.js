@@ -7,7 +7,7 @@ export default function Navigation() {
     const { currentUser } = useAuth()
     return (
         <Navbar bg='dark' variant='dark' expand='md' className='p-3'>
-            <Navbar.Brand href='/'>ToDo</Navbar.Brand>
+            <Navbar.Brand href='/'>AV Photography</Navbar.Brand>
             {/* Hamburger button */}
             <Navbar.Toggle />
             <Navbar.Collapse className='justify-content-end'>
@@ -16,7 +16,7 @@ export default function Navigation() {
                     {currentUser && (
                         <>
                             <Link to='/todos' className='nav-link'>
-                                ToDos
+                                Tasks
                             </Link>
                             <Link to='/categories' className='nav-link'>
                                 Categories

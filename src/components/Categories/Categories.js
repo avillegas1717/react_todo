@@ -31,21 +31,21 @@ export default function Categories() {
 
   return (
     <section className="categories">
-      <article className="bg-info p-5">
-        <h1 className="text-center">Categories Dashboard</h1>
+      <article className="bg-secondary p-5">
+        <h1 className="text-center text-light">Categories</h1>
       </article>
       {/* CREATE UI - this is only shown to the ADMIN! */}
       {currentUser.email === process.env.REACT_APP_ADMIN_EMAIL &&
         <div className="bg-dark p-2 mb-3 text-center">
           {showCreate ? 
             <>
-              <button onClick={() => setShowCreate(false)} className="btn btn-warning">
+              <button onClick={() => setShowCreate(false)} className="btn btn-outline-danger">
                 Cancel
               </button>
               <CatCreate getCategories={getCategories} setShowCreate={setShowCreate} />
             </> :
-            <button onClick={() => setShowCreate(true)} className="btn btn-info">
-              Create Category
+            <button onClick={() => setShowCreate(true)} className="btn btn-outline-light">
+              Create
             </button>
           }
         </div>

@@ -12,7 +12,7 @@ export default function Footer() {
       {currentUser &&
        <Logout />
       }
-      <footer className='text-center text-white bg-info p-4'>
+      <footer className='text-center text-white bg-secondary p-4'>
           <strong>&copy; {new Date().getFullYear()} Alicia Villegas, All Rights Reserved</strong>
       </footer>
     </>

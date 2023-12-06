@@ -29,8 +29,8 @@ export default function Todos() {
         {/* Begin Create UI - only show to admin */}
         {currentUser.email === process.env.REACT_APP_ADMIN_EMAIL &&
             <div className="bg-dark p-2 mb-3 text-center">
-                <button className="btn btn-dark" onClick={() => setShowCreate(!showCreate)}>
-                    {!showCreate ? 'Create New Task' : 'Cancel'}
+                <button className="btn btn-outline-light" onClick={() => setShowCreate(!showCreate)}>
+                    {!showCreate ? 'Create' : 'Cancel'}
                 </button>
                 <div className="createContainer">
                     {showCreate &&
@@ -42,7 +42,7 @@ export default function Todos() {
         }
         <FilterCat setFilter={setFilter}/>
         <Container>
-            <article className="resourceGallery row justify-content-center">
+            <article className="todoGallery row justify-content-center">
                 {/* Below we write conditional rendering to see if the user is trying to filter results or not, and display the right resources according to what they want. */}
                 {filter === 0 ? todos.map(t => 
                     <SingleTodo key={t.toDoId} todo={t}/>

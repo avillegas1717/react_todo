@@ -15,12 +15,12 @@ export default function FilterCat(props) {
 
   return (
     <div className='text-center mt-5'>
-      <button onClick={() => props.setFilter(0)} className="btn btn-outline-info bg-dark m-1">
+      <button onClick={() => props.setFilter(0)} className="btn btn-dark m-1">
         All
       </button>
       {/* Below we map all of the categories to a button that will be used to filter resources on that category */}
       {categories.map(cat => 
-        <button key={cat.categoryId} onClick={() => props.setFilter(+cat.categoryId)} className="btn btn-outline-info bg-dark m-1">
+        <button key={cat.categoryId} onClick={() => props.setFilter(+cat.categoryId)} className="btn btn-dark m-1">
           {cat.catName}
         </button>  
       )}

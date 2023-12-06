@@ -9,7 +9,7 @@ section.ToDos {
     padding: 2em 0 4em;
   }
   
-  /* below is the styling for our resource tile */
+
   article.todoGallery div.singleTodo {
     background-color: rgba(200, 200, 200, .8);
     border-radius: 5px;

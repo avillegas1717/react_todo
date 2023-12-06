@@ -4,7 +4,6 @@ import { todoSchema } from "../../utilities/validationSchema"
 import axios from "axios"
 
 export default function TodoForm(props) {
-    //We need to get the categories from our API to populate a category dropdown list
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
@@ -17,18 +16,13 @@ export default function TodoForm(props) {
     const handleSubmit = (values) => {
         console.log(values)
         if (!props.todo) {
-            // If there is no resource prop, we are in create mode in this scope
-            // First we assemble the temp object of our new Resource
             const todoToCreate = values
 
-            // Second, we pass the resource to our API in axios.post() request
             axios.post(`http://todoapi.aliciavillegas.net/api/ToDos`, todoToCreate).then(() => {
-                props.setShowCreate(false) //close the create form in Resources.js
-                props.getToDos() //update the resources tiles in Resources.js
+                props.setShowCreate(false)
+                props.getToDos()
             })
         } else {
-            // If there is a resource prop, we are in edit mode in this scope
-            // First we assemble the temp object of our edited resource
             const todoToEdit = {
                 todoId: props.todo.todoId,
                 name: values.name,
@@ -37,7 +31,7 @@ export default function TodoForm(props) {
                 description: values.description,
                 categoryId: values.categoryId,
             }
-            // Second, we make the put request using axios and pass in our todoToEdit
+
             axios.put(`http://todoapi.aliciavillegas.net/api/ToDos/${props.todo.todoId}`, todoToEdit).then(() => {
                 props.setShowEdit(false)
                 props.getToDos()
@@ -95,7 +89,7 @@ export default function TodoForm(props) {
                             ))}
                         </Field>
                         <div className='form-group m-3'>
-                            <button type='submit' className='btn btn-success m-3'>
+                            <button type='submit' className='btn btn-outline-success m-3'>
                                 Submit to API
                             </button>
                         </div>
