@@ -45,10 +45,10 @@ export default function Todos() {
             <article className="resourceGallery row justify-content-center">
                 {/* Below we write conditional rendering to see if the user is trying to filter results or not, and display the right resources according to what they want. */}
                 {filter === 0 ? todos.map(t => 
-                    <SingleTodo key={t.resourceId} todo={t}/>
+                    <SingleTodo key={t.toDoId} todo={t}/>
                 ) :
                 todos.filter(t => t.categoryId === filter).map(t =>
-                   <SingleTodo key={t.resourceId} todo={t}/>
+                   <SingleTodo key={t.toDoId} todo={t}/>
                 )
                 }
                 {filter !== 0 && todos.filter(t => t.categoryId === filter).length === 0 &&

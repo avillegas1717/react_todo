@@ -8,7 +8,7 @@ export default function TodoForm(props) {
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
-        axios.get(`https://todoapi.aliciavillegas.net/api/ToDos`).then((response) => {
+        axios.get(`http://todoapi.aliciavillegas.net/api/ToDos`).then((response) => {
             console.log(response)
             setCategories(response.data)
         })
@@ -22,7 +22,7 @@ export default function TodoForm(props) {
             const todoToCreate = values
 
             // Second, we pass the resource to our API in axios.post() request
-            axios.post(`https://todoapi.aliciavillegas.net/api/ToDos`, todoToCreate).then(() => {
+            axios.post(`http://todoapi.aliciavillegas.net/api/ToDos`, todoToCreate).then(() => {
                 props.setShowCreate(false) //close the create form in Resources.js
                 props.getToDos() //update the resources tiles in Resources.js
             })
@@ -38,7 +38,7 @@ export default function TodoForm(props) {
                 categoryId: values.categoryId,
             }
             // Second, we make the put request using axios and pass in our todoToEdit
-            axios.put(`https://todoapi.aliciavillegas.net/api/ToDos/${props.todo.todoId}`, todoToEdit).then(() => {
+            axios.put(`http://todoapi.aliciavillegas.net/api/ToDos/${props.todo.todoId}`, todoToEdit).then(() => {
                 props.setShowEdit(false)
                 props.getToDos()
             })

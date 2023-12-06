@@ -7,7 +7,7 @@ export default function FilterCat(props) {
   const [categories, setCategories] = useState([])
 
   useEffect(() => {
-    axios.get(`https://todo.aliciavillegas.net/api/ToDos`).then(response => {
+    axios.get(`http://todoapi.aliciavillegas.net/api/Categories`).then(response => {
       console.log(response)
       setCategories(response.data)
     })
@@ -21,7 +21,7 @@ export default function FilterCat(props) {
       {/* Below we map all of the categories to a button that will be used to filter resources on that category */}
       {categories.map(cat => 
         <button key={cat.categoryId} onClick={() => props.setFilter(+cat.categoryId)} className="btn btn-outline-info bg-dark m-1">
-          {cat.categoryName}
+          {cat.catName}
         </button>  
       )}
     </div>

@@ -13,7 +13,7 @@ export default function CatForm(props) {
             const catToCreate = values
 
             //Second we send the object in a post request using axios
-            axios.post(`http://todo.aliciavillegas.net/api/categories/`, catToCreate).then(() => {
+            axios.post(`http://todoapi.aliciavillegas.net/api/categories/`, catToCreate).then(() => {
                 props.setShowCreate(false)//this will close the create form
                 props.getCategories()//This will refresh the table of categories to include the new one
             })
@@ -24,7 +24,7 @@ export default function CatForm(props) {
                 categoryName: values.categoryName,
                 categoryDescription: values.categoryDescription
             }
-            axios.put(`http://todo.aliciavillegas.net/api/categories/${props.category.categoryId}`, catToEdit).then(() => {
+            axios.put(`http://todoapi.aliciavillegas.net/api/categories/${props.category.categoryId}`, catToEdit).then(() => {
                 props.setShowEdit(false)
                 props.getCategories()
             })

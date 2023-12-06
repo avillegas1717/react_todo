@@ -19,7 +19,7 @@ export default function Categories() {
 
  
   const getCategories = () => {
-    axios.get(`http://todo.aliciavillegas.net/api/Categories`).then(response => {
+    axios.get(`http://todoapi.aliciavillegas.net/api/Categories`).then(response => {
       console.log(response)
       setCategories(response.data)
     })
