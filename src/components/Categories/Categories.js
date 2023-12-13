@@ -31,7 +31,7 @@ export default function Categories() {
 
   return (
     <section className="categories">
-      <article className="bg-secondary p-5">
+      <article className="bg-customPurple p-5">
         <h1 className="text-center text-light">Categories</h1>
       </article>
       {/* CREATE UI - this is only shown to the ADMIN! */}
@@ -39,12 +39,12 @@ export default function Categories() {
         <div className="bg-dark p-2 mb-3 text-center">
           {showCreate ? 
             <>
-              <button onClick={() => setShowCreate(false)} className="btn btn-outline-danger">
+              <button onClick={() => setShowCreate(false)} className="btn btn-danger text-light">
                 Cancel
               </button>
               <CatCreate getCategories={getCategories} setShowCreate={setShowCreate} />
             </> :
-            <button onClick={() => setShowCreate(true)} className="btn btn-outline-light">
+            <button onClick={() => setShowCreate(true)} className="btn btn-customPurple">
               Create
             </button>
           }

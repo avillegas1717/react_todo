@@ -89,8 +89,8 @@ export default function TodoForm(props) {
                             ))}
                         </Field>
                         <div className='form-group m-3'>
-                            <button type='submit' className='btn btn-outline-success m-3'>
-                                Submit to API
+                            <button type='submit' className='btn btn-customPurple m-3'>
+                                Submit
                             </button>
                         </div>
                     </div>

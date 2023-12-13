@@ -23,13 +23,13 @@ export default function Todos() {
   }, [])
   return (
     <section className="todos">
-        <article className="bg-dark p-5">
+        <article className="bg-customPurple p-5">
             <h1 className="text-center text-light">Tasks Home</h1>
         </article>
         {/* Begin Create UI - only show to admin */}
         {currentUser.email === process.env.REACT_APP_ADMIN_EMAIL &&
             <div className="bg-dark p-2 mb-3 text-center">
-                <button className="btn btn-outline-light" onClick={() => setShowCreate(!showCreate)}>
+                <button className="btn btn-customPurple" onClick={() => setShowCreate(!showCreate)}>
                     {!showCreate ? 'Create' : 'Cancel'}
                 </button>
                 <div className="createContainer">

@@ -17,16 +17,16 @@ export default function Login() {
 
   return (
     <div className='login'>
-      <article className="bg-info mb-5 p-5 text-dark">
+      <article className="bg-customPurple mb-5 p-5 text-light">
         <h1 className="text-center">Welcome to AV Photography!</h1>
       </article>
       <Container>
         <Card className="m-2 border-dark text-center">
-          <Card.Header className="bg-dark text-white">
+          <Card.Header className="bg-customBlue text-white">
             <h2>Login for full functionality</h2>
           </Card.Header>
           <Card.Body>
-            <button className="btn btn-success" onClick={() => handleAuth()}>
+            <button className="btn btn-customBlue" onClick={() => handleAuth()}>
               Login w/ GitHub
             </button>
           </Card.Body>

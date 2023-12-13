@@ -46,7 +46,7 @@ export default function SingleTodo(props) {
         <p>{description}</p> : 
         <p>No description provided.</p>    
         }
-        <a href={url} target='_blank' rel='noreferrer' className="btn btn-dark">
+        <a href={url} target='_blank' rel='noreferrer' className="btn btn-customTeal">
             Visit { linkText }
         </a>
     </div>

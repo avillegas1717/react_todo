@@ -16,7 +16,7 @@ export default function Navigation() {
                     {currentUser && (
                         <>
                             <Link to='/todos' className='nav-link'>
-                                Tasks
+                                To Do
                             </Link>
                             <Link to='/categories' className='nav-link'>
                                 Categories
